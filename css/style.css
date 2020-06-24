@@ -170,6 +170,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 input,
@@ -289,7 +290,6 @@ align-items: center; */
   color: #2196f3;
 }
 
-/* Мы будем делать все иконки спрайтом */
 .list__link-icon {
   display: flex;
   fill: #757575;
@@ -313,13 +313,18 @@ align-items: center; */
 .layout__sect-hero {
   text-align: center;
   min-height: 600px;
-  max-width: 1600px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
-  background-size: cover;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../img/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -364,8 +369,35 @@ align-items: center; */
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #212121;
+}
+
+.container__title-main {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 50px;
+}
+
+.container__title-second {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.container__items {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Portfolio */
@@ -385,10 +417,17 @@ align-items: center; */
   line-height: 1.87;
 }
 
+button:hover,
+button:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
 button {
   display: inline-block;
+  cursor: pointer;
   color: #212121;
-  background-color: ##f5f4fa;
+  background-color: #f5f4fa;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -397,13 +436,10 @@ button {
   border-radius: 4px;
   padding: 6px 22px;
   min-width: 73px;
-  cursor: pointer;
 }
 
-button:hover,
-button:focus {
-  color: #ffffff;
-  background-color: #2196f3;
+.list__item-portfolio:not(:last-child) {
+  margin-right: 8px;
 }
 
 .layout__sect {
@@ -424,4 +460,12 @@ button:focus {
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+.footer__address {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
